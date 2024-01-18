@@ -128,8 +128,7 @@ else:
 # Step 5: Define the Trainer
 tokenizer = AutoTokenizer.from_pretrained(script_args.model_name, use_fast=True)
 
-# Establecer el token de relleno
-tokenizer.pad_token = tokenizer.eos_token  # Puedes cambiar 'eos_token' al token que desees usar como relleno
+tokenizer.pad_token = tokenizer.eos_token 
 
 trainer = SFTTrainer(
     model=model,
